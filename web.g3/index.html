@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圖示網頁佈局 (單一文件)</title>
+    
+    
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <!-- 1. Header (標頭) -->
+    <header class="header">
+      幾千年前的他們
+  </header>
+
+    <!-- 2. Title/Subtitle (標題敘述) -->
+    <section class="title-section">
+        <h1>古人也那樣...</h1>
+        <p>讀古文撞到鄉民</p>
+    </section>
+
+    <!-- 3. Main Layout (導覽列 + 內容區) -->
+    <div class="main-layout">
+        
+        <!-- 導覽列 (左側邊欄) -->
+        <nav class="sidebar">
+          <h2>導覽列</h2>
+            <ul>
+                <li><a href="page4.html">后羿嫦娥n種形象&nbsp;</a></li>
+                <li><a href="page5.html">劉阮神仙交媾與洞穴意象&nbsp;</a></li>
+                <li><a href="page6.html">李清照的好賭好酒好色</a></li>
+				<li><a href="index.html" class="current-page">首頁</a></li>
+            </ul>
+        </nav>
+
+        <!-- 內容區 (主要內容) -->
+        <main class="main-content">
+            <!-- 卡片容器 -->
+            <div class="card-container">
+                
+                <!-- 卡片 1 -->
+                <div class="card card-1">
+                    <!-- 放置圖片 (預留連結) -->
+                    <a href="page1.html" target="_self"><img 
+                            src="images/chang.PNG" 
+                            alt="嫦娥" 
+                            class="card-image"
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/000000?text=圖片載入失敗';"
+                        ></a>
+
+                    <!-- 文字敘述 -->
+                    <div class="card-body">
+                        <h3>嫦娥后羿不認識?</h3>
+                        <p>
+                          《歸藏》，如今已缺失不全，但當中有兩條完全不相干的紀載。其中的「常娥奔月」就是嫦娥偷了西王母的仙藥，吃下去之後就飛上月亮；其中的「羿斃十日」寫的是后羿善射，想射下十個太陽就真的做到了。由上述可見這兩者是完全分開的劇情。
+                      </p>
+                    </div>
+                </div>
+
+                <!-- 卡片 2 -->
+                <div class="card card-2">
+                    
+                    <!-- 放置圖片 (預留連結) -->
+                    <a href="page2.html" target="_blank" class="card-image-link">
+                        <img 
+                            src="images/liuruan1.png" 
+                            alt="劉晨阮肇" 
+                            class="card-image"
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/000000?text=圖片載入失敗';"
+                        >
+                    </a>
+                    
+                    <!-- 文字敘述 -->
+                    <div class="card-body">
+                        <h3>劉晨阮肇偶遇正妹搭訕......</h3>
+                        <p>
+                        遇到兩個神正妹，劉阮完全不認識兩正妹，但就跟著她們回家了。跟著回家嚇一跳，正妹家就兩張大床，還「施絳羅帳，帳角懸鈴，金銀交錯」掛聖誕樹裝飾到底要幹啥？接著侍女拿了美食美酒招待，再端出桃子招待，終於天黑了，正妹改以身體招待……</p>
+                    </div>
+                </div>
+
+                <!-- 卡片 3 -->
+                <div class="card card-3">
+                    
+                    <!-- 放置圖片 (預留連結) -->
+                    <a href="page3.html" target="_blank" class="card-image-link">
+                        <img 
+                            src="images/liching2.jpg" 
+                            alt="李清照" 
+                            class="card-image"
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/000000?text=圖片載入失敗';"
+                        >
+                    </a>
+                    
+                    <!-- 文字敘述 -->
+                    <div class="card-body">
+                      <h3>李清照逃難帶十車書?</h3>
+                      <p> 
+						  物品不能全部載去,先把書籍中重而且大的印本去掉,又把藏畫中重複的幾幅去掉,又把古器中沒有款識的去掉。後來又去掉書籍中的國子監刻本、畫卷中的平平之作及古器中又重又大的幾件。經多次削減,還裝了十五車書籍。 </p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- 4. Footer (頁腳) -->
+    <footer class="footer">
+        &copy; 2025 網頁頁腳. All rights reserved.
+    </footer>
+
+</body>
+</html>

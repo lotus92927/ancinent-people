@@ -1,0 +1,207 @@
+@charset "utf-8";
+
+        /* 引入字體 (Inter) */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        /* 基礎樣式重置：確保網頁佔滿視窗並設定基本字體與顏色 */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #f9fafb; /* 淺灰背景 */
+            color: #1f2937; /* 深灰文字 */
+        }
+
+        /* 1. Header (標頭) 樣式 */
+        .header {
+            height: 5rem; 
+            background-color: #1d4ed8; /* 藍色背景 */
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 800; /* font-extrabold */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        /* 2. Title/Subtitle (標題敘述) 樣式 */
+        .title-section {
+            padding: 2rem 1rem; 
+            text-align: center;
+            background-color: #eff6ff; /* 淺藍背景 */
+            color: #1e40af; /* 深藍文字 */
+            border-bottom: 1px solid #bfdbfe; 
+        }
+        .title-section h1 {
+            font-size: 1.875rem; 
+            font-weight: bold;
+            margin-bottom: 0.5rem; 
+        }
+        .title-section p {
+            font-size: 1.125rem; 
+            color: #4b5563; 
+        }
+
+        /* 3. Main Layout (導覽列 + 內容區) 佈局 */
+        .main-layout {
+            display: flex;
+            flex: 1; /* 佔據 Header/Footer 之間的剩餘空間 */
+            flex-direction: column; /* 預設 (手機版)：垂直堆疊 */
+        }
+
+        /* 導覽列 (左側邊欄) 樣式 */
+        .sidebar {
+            width: 100%; /* 手機版：滿寬 */
+            min-width: 150px;
+            background-color: #f3f4f6; /* 淺灰背景 */
+            padding: 1.5rem; 
+            border-bottom: 1px solid #d1d5db; 
+        }
+        .sidebar h2 {
+            font-size: 1.25rem; 
+            font-weight: 600; 
+            margin-bottom: 1rem; 
+            color: #1d4ed8; 
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem; 
+        }
+        .sidebar a {
+            display: block;
+            padding: 0.5rem; 
+            border-radius: 0.5rem; 
+            text-decoration: none;
+            color: inherit;
+            transition: background-color 150ms ease-in-out; 
+        }
+        .sidebar a:hover {
+            background-color: #bfdbfe; 
+        }
+        .sidebar .current-page {
+            background-color: #93c5fd; 
+            color: #1e3a8a; 
+            font-weight: 500; 
+        }
+
+        /* 內容區 (主要內容) 樣式 */
+        .main-content {
+            flex: 1;
+            padding: 2rem; 
+        }
+.main-content .article1 {
+}
+
+
+
+        /* 卡片容器：使用 Grid 佈局 */
+        .card-container {
+            display: grid;
+            grid-template-columns: 1fr; /* 手機版：單欄 */
+            gap: 2rem; 
+        }
+.main-layout .main-content p {
+	text-align: left;
+}
+.main-content p img {
+	text-align: center;
+	width: 40%;
+	height: auto;
+	float: none;
+}
+
+
+
+
+        /* 卡片樣式 */
+        .card {
+            background-color: #ffffff;
+            border-radius: 0.75rem; 
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: all 300ms ease-in-out; 
+        }
+
+        .card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
+            transform: translateY(-0.25rem); /* 懸停時略微上浮 */
+        }
+
+        /* 圖片區域 */
+        .card-image-link {
+            display: block;
+        }
+        .card-image {
+            width: 100%;
+            height: 12rem; /* 固定高度 */
+            object-fit: cover;
+        }
+
+        /* 文字敘述區域 */
+        .card-body {
+            padding: 1.25rem; 
+        }
+        .card-body h3 {
+            font-size: 1.25rem; 
+            font-weight: 600; 
+            margin-bottom: 0.5rem; 
+        }
+        .card-body p {
+            color: #4b5563; 
+            font-size: 0.875rem; 
+        }
+
+        /* 卡片主題顏色定義 (圖片背景色與標題色) */
+        .card-1 .card-image { background-color: #3b82f6; } 
+        .card-1 h3 { color: #2563eb; } 
+
+        .card-2 .card-image { background-color: #f59e0b; } 
+        .card-2 h3 { color: #d97706; } 
+
+        .card-3 .card-image { background-color: #10b981; } 
+        .card-3 h3 { color: #059669; } 
+
+
+        /* 4. Footer (頁腳) 樣式 */
+        .footer {
+            height: 4rem; 
+            background-color: #1f2937; /* 深灰背景 */
+            color: #d1d5db; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem; 
+            box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); 
+        }
+
+        /* 響應式設計 (Media Queries) */
+
+        /* 中型裝置 (640px 及以上): 內容區變為兩欄卡片 */
+        @media screen and (min-width: 640px) {
+            .card-container {
+                grid-template-columns: repeat(2, 1fr); 
+            }
+        }
+
+        /* 大型裝置 (1024px 及以上): 啟用左側導覽列和三欄卡片佈局 */
+        @media screen and (min-width: 1024px) {
+            .main-layout {
+                flex-direction: row; /* 水平排列 (導覽列在左，內容區在右) */
+            }
+            .sidebar {
+                width: 16.666667%; /* 佔據約 1/6 寬度 */
+                border-bottom: none;
+                border-right: 1px solid #d1d5db; 
+            }
+            .card-container {
+                grid-template-columns: repeat(3, 1fr); /* 內容區三欄 */
+            }
+        }
